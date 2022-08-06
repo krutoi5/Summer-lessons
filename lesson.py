@@ -21,10 +21,28 @@ class Car():
         max_speed =self.max_speed + other.max_speed
         return Car(color, prise, age, max_speed)
 
-car1 = Car('red', 1000000, 2, 180)
-car2 = Car('red', 2000000, 32, 190)
-car3 = car1 + car2
-print(car3)
+    def __sub__(self, other):
+        color = 'widht'
+        prise = self.prise - other.prise
+        age = self.age - other.age
+        max_speed =self.max_speed - other.max_speed
+        return Car(color, prise, age, max_speed)
+    
+    def __mul__(self, other):
+        color = 'black'
+        prise = self.prise * other.prise
+        age = self.age * other.age
+        max_speed =self.max_speed * other.max_speed
+        return Car(color, prise, age, max_speed)
+
+
+car1 = Car('red', 2000000, 3, 280)
+car2 = Car('red', 1000000, 2, 190)
+
+car3 = car1 - car2
+car4 = car1 * car2
+
+print(car3, car4)
 if car1 == car2:
     print('Одинаковые')
 else:
