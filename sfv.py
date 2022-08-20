@@ -3,7 +3,7 @@ def funct(func):
 
     def fst(*a, **b):
         print('старт')
-        func(a, b)
+        func(*a, **b)
         print('конец')
     return fst
 
